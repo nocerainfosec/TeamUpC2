@@ -111,7 +111,7 @@ func prepareWebhookPayload(encodedResult string, serverURL string) ([]byte, erro
 					"body": []map[string]interface{}{
 						{
 							"type":   "TextBlock",
-							"text":   "😈 ..convoC2 is cooking.. 😈",
+							"text":   "😈 ..TeamUPC2 is cooking.. 😈",
 							"size":   "Large",
 							"weight": "Bolder",
 						},

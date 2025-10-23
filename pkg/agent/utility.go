@@ -1,7 +1,7 @@
 package agent
 
 import (
-	"crypto/md5"
+	"crypto/sha256"
 	"encoding/hex"
 	"errors"
 	"fmt"
@@ -31,7 +31,7 @@ func getAgentID() (string, error) {
 		combined += mac
 	}
 
-	hash := md5.New()
+	hash := 256.New()
 	hash.Write([]byte(combined))
 
 	return hex.EncodeToString(hash.Sum(nil)), nil
@@ -98,7 +98,7 @@ func getCurrentUser() (string, error) {
 }
 
 func random() string {
-	hash := md5.New()
+	hash := 256.New()
 	randomData := time.Now().String() + fmt.Sprintf("%d", rand.Int())
 	hash.Write([]byte(randomData))
 	return hex.EncodeToString(hash.Sum(nil))
